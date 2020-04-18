@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:padding="8dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".AddClass"
+tools:showIn="@layout/activity_add_class">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/montserrat"
+    android:text="Please enter the given details ..."
+    android:layout_marginBottom="8dp"
+    android:textColor="@android:color/black"
+    android:paddingStart="2dp"/>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/etClassNameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    app:boxCornerRadiusBottomEnd="8dp"
+    app:boxCornerRadiusBottomStart="8dp"
+    app:boxCornerRadiusTopEnd="8dp"
+    app:boxCornerRadiusTopStart="8dp"
+    app:boxStrokeColor="@color/colorPrimary">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etClassName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter name of your class"
+        android:inputType="text"
+        android:paddingStart="14dp" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/etSubNameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_marginTop="8dp"
+    app:boxCornerRadiusBottomEnd="8dp"
+    app:boxCornerRadiusBottomStart="8dp"
+    app:boxCornerRadiusTopEnd="8dp"
+    app:boxCornerRadiusTopStart="8dp"
+    app:boxStrokeColor="@color/colorPrimary">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etSubName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:hint="Enter name of your subject"
+        android:inputType="text"
+        android:paddingStart="14dp" />
+</com.google.android.material.textfield.TextInputLayout>
+
+<Button
+    android:id="@+id/btConfirm"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:fontFamily="@font/montserrat"
+    android:text="Confirm"
+    android:textAllCaps="false"
+    android:textColor="@android:color/white"
+    android:textStyle="bold"
+    android:textSize="16sp"/>
+
+</LinearLayout>

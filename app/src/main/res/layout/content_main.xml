@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main"
+    android:background="@android:color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+                <ImageView
+                    android:id="@+id/ivUserImage"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/demodp"/>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cv1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Yash Songara"
+                    android:textColor="@android:color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvUserName"
+                    android:fontFamily="@font/montserrat"
+                    android:text="yashsongara101@gmail.com"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/cv1"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginEnd="5dp"
+                        app:cardBackgroundColor="@color/blue">
+
+                        <TextView
+                            android:id="@+id/tvCurrentDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat"
+                            android:text="22-02-2019"
+                            android:background="@android:color/transparent"
+                            android:textAlignment="center"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginStart="5dp"
+                        app:cardBackgroundColor="@color/red">
+
+                        <TextView
+                            android:id="@+id/tvRemainingClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Mon"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/llAddClass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:padding="10dp"
+                            android:onClick="addClass"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/addnewclass" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="addClass"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Add Class" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:padding="10dp"
+                            android:onClick="setting"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/setting" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="setting"
+                            android:fontFamily="@font/montserrat"
+                            android:text="Settings" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/llSignOut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageButton
+                            android:layout_width="48dp"
+                            android:layout_height="56dp"
+                            android:background="@android:color/transparent"
+                            android:padding="10dp"
+                            android:onClick="signOut"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/logout" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:onClick="signOut"
+                            android:text="sign out" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:weightSum="2"
+        android:orientation="vertical">
+        <Button
+            android:onClick="TakeAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Take Attendance"
+            android:background="@drawable/btgreen"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"/>
+        <Button
+            android:onClick="ShowAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Show Attendance"
+            android:background="@drawable/btred"
+            android:textColor="@android:color/white"
+            android:textSize="26sp"
+            android:fontFamily="@font/montserrat"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/bg"/>
+
+</LinearLayout>

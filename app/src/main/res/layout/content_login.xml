@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Login"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_login">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="penguin.json"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Welcome to"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/montserrat"
+        android:text="your personal"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_below="@id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Attendance"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_below="@id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Manager"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv4"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/montserrat"
+        android:text="for you and"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv5"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/montserrat"
+        android:text="your students."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="24sp"
+        android:layout_marginStart="20dp"/>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btGsi"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="we need to log you in to save\nyour attendance data to our\ndatabase."
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="with ❤ from Believe."
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="20dp"/>
+
+</RelativeLayout>

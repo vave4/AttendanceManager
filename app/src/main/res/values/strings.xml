@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Attendance manager</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_add_class">AddClass</string>
+    <string name="title_activity_choose_class">ChooseClass</string>
+    <string name="title_activity_take_attendance">TakeAttendance</string>
+    <string name="title_activity_show_attendence">ShowAttendence</string>
+    <string name="title_activity_show_individual_attendence">ShowIndividualAttendence</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_delete_class">DeleteClass</string>
+    <string name="title_activity_add_new_student">AddNewStudent</string>
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DeleteClass"
+    tools:showIn="@layout/activity_delete_class">
+        <TextView
+            android:id="@+id/tvWarningLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/ic_warning"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/tvWarningText"
+            android:layout_below="@+id/tvWarningLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You can't recover your data\nafter deleting it ... !!!"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_below="@+id/tvWarningText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:background="@drawable/listview_background">
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="*Select the Classes you want to delete."
+            android:gravity="center"
+            android:padding="8dp"/>
+        <ListView
+            android:id="@+id/lvClassList"
+            android:layout_below="@+id/tvNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvEmptyNotification"
+        android:layout_below="@+id/tvWarningText"
+        android:visibility="visible"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="No class available to delete."
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
